@@ -120,8 +120,8 @@ class Wavelet_deblur:
             for w in w_steps:
                 mad_loc = []
                 # 8 punten rond centrum
-                centers = [(c_x - N_2, c_y - N_2), (c_x - N_2, c_y),(c_x - N_2, c_y + N_2),(c_x, c_y - N_2),
-                           (c_x, c_y + N_2), (c_x + N_2, c_y - N_2), (c_x + N_2, c_y), (c_x + N_2, c_y + N_2)]
+                centers = [(c_x - w, c_y - w), (c_x - w, c_y),(c_x - w, c_y + w),(c_x, c_y - w),
+                           (c_x, c_y + w), (c_x + w, c_y - w), (c_x + w, c_y), (c_x + w, c_y + w)]
                 for c in centers:
                     block2 = l_cur[c[0] - N_2: c[0] + N_2 + 1, c[1] - N_2: c[1] + N_2 + 1]
                     # MAD-functie op block 1 en 2
